@@ -14,29 +14,29 @@ va a generar la private key, en donde este parado, deberia ser en platforms/andr
 ## 2. CONFIGURACION DE LAS KEYS Y ALIAS
 Crear archivo release-signing.properties en platforms/android/ con el path al keystore y el alias name (segun lo configurado anteriormente)
 
-    storeFile=/ritmoApp.keystore
-		storeType=jks
-		keyAlias=test
+  storeFile=/ritmoApp.keystore
+  storeType=jks
+  keyAlias=test
 
 ### Opcional (para que no te pregunte password por cada build)
 
-    keyPassword=your-key-password
-		storePassword=your-store-password
+  keyPassword=your-key-password
+  storePassword=your-store-password
 
 ## 3. ir al proyecto y ejecutar (esto supuestamente ademas pone la firma digital en base a la config anterior):
 
-    cordova build android --release
+  cordova build android --release
 
 
 ## 4. Verificar si la app esta firmada (se puede saltear)
 
-    jarsigner -verify -verbose -certs android-release.apk
+  jarsigner -verify -verbose -certs android-release.apk
 
 
 ## 5. Zipalign es obligatorio por google para optimizar la apk (primero el apk unaligned y el segundo es el output):
 el comando se puede ejecutar desde: d:program files/android/android-sdk/build-tools/22.0.1 (ahi esta el zipalign.exe), desde ahi ejecutar esto en consola:
 
-    zipalign -v 4 D:/xampp/htdocs/proyectos/phaser_cordova/ritmo/platforms/android/build/outputs/apk/android-release-unsigned.apk D:/xampp/htdocs/proyectos/phaser_cordova/ritmo/platforms/android/build/outputs/apk/myapp.apk
+  zipalign -v 4 D:/xampp/htdocs/proyectos/phaser_cordova/ritmo/platforms/android/build/outputs/apk/android-release-unsigned.apk D:/xampp/htdocs/proyectos/phaser_cordova/ritmo/platforms/android/build/outputs/apk/myapp.apk
 
 
 
