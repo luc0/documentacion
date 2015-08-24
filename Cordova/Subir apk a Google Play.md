@@ -34,7 +34,7 @@ Crear archivo release-signing.properties en platforms/android/ con el path al ke
 
 
 ### 5. Zipalign es obligatorio por google para optimizar la apk (primero el apk unaligned y el segundo es el output):
-el comando se puede ejecutar desde: d:program files/android/android-sdk/build-tools/22.0.1 (ahi esta el zipalign.exe), desde ahi ejecutar esto en consola:
+el comando se puede ejecutar desde: d:/program files/android/android-sdk/build-tools/22.0.1 (ahi esta el zipalign.exe), desde ahi ejecutar esto en consola:
 
     zipalign -v 4 D:/xampp/htdocs/proyectos/phaser_cordova/ritmo/platforms/android/build/outputs/apk/android-release-unsigned.apk D:/xampp/htdocs/proyectos/phaser_cordova/ritmo/platforms/android/build/outputs/apk/myapp.apk
 
