@@ -12,7 +12,7 @@
 
 - Copiar el archivo "FlurryAnalytics-5.5.0.jar" (de alguno de mis proyectos) (creo que se consigue en la pagina de flurry tambien) copiarlo a: "platforms\android\libs"
 
-- Listo!. Cuando instale Admob me va a saltar un error con com.google.android.gms esto lo arreglo sacando "#cordova.system.library.1=com.google.android.gms:play-services-ads:+"
+- Listo!. Cuando instale Admob me va a saltar un error ver solucion: https://github.com/luc0/documentacion/blob/master/Cordova/Admob.md
 
 
   (Si da error. Fijarse que no haya un google play services instalado, sino desintalarlo. puede haber uno en plugins y otro en android, depende.)
